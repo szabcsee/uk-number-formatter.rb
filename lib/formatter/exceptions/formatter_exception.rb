@@ -1,0 +1,3 @@
+class FormatterError < StandardError
+
+end
