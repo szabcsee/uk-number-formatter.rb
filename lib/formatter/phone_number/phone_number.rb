@@ -1,11 +1,10 @@
-module PhoneNumber
-  include UK
+module Formatter::PhoneNumber
 
-  def validate_country_format number, format
-    number.match?(format)
+  def self.validate_country_format(number, format)
+    format.match?(number)
   end
 
-  def replace_country_code phone_number, sub_country_code, country_code
+  def self.replace_country_code(phone_number, sub_country_code, country_code)
     phone_number.sub(sub_country_code, country_code)
   end
 end
